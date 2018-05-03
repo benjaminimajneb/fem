@@ -1,192 +1,522 @@
 <html>
-	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-		<title>FEM.ALE 2016</title>
-		<META HTTP-EQUIV=REFRESH CONTENT="1; 
-URL=http://fem.ale-festival.co.uk">
-		<link rel="stylesheet" type="text/css" href="../css/plaster1.css">
-		<script src="../js/jquery-1.10.2.min.js"></script>
-		<script src="../js/raphael.js"></script>
-		<link href='http://fonts.googleapis.com/css?family=Oswald:400,300' rel='stylesheet' type='text/css'>
-		<meta name="description" content="Website for the Plasterers Arms, a beer pub in Norwich">
-		<meta name="keywords" content="Female,Ale,Brewsters,Women,Plasterers,Arms,Beer,Norwich,Pub,Pints,Music,Great,Real Ale,Craft Beer,Cider">
-		<meta name="author" content="Benjamin Andrew Hugo Thompson">
-		<meta charset="UTF-8">
-		
-		<script>
-		//GOOGLE ANALYTICS//
-			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-			ga('create', 'UA-12095952-2', 'auto');
-			ga('send', 'pageview');
-		</script>
 
-		<style>
-			#femaleWebsite{display: block; position: relative; width: 100%; height: 100%; 	font-family: oswaldlight; background-size: cover;background-image:url('img/background.jpg');}
-	
-			#title{position:absolute;top:0;bottom:0;text-align:center;height:200px;width:100%;top:50%;margin-top:-100px}
-			#title h1,h2{letter-spacing:2px;color:white;line-height:20px;text-shadow: 0px 0px 20px #000;}
-		
-			h2 a {display:inline-block;width:100px;height:100px;line-height:100px;font-size:16px;margin-left:25px;	margin-left:25px;border:1px solid black;border-radius:50px; background-color:black;}	
-			#logoBar { width:100%; height:100px;}
-			#logoBar img{ visibility:visible;position:relative;display:block;width:auto;height:100%;margin-left:auto;margin-right:auto;left:0;top:0;}
-			#menuBar{	top:-233px; /* if I set this as margin-top, why does the whole page move up?!*/	position:relative;}
-			#menuOptions{	background-color:rgba(255,255,255,0.7);	max-width:100%;	height:102.22px;	padding:15px;}
-			#menuOptions h2{	padding:0;	margin:0;	border:0;}
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>FEM.ALE FESTIVAL</title>
+    <script src="js/jquery-1.10.2.min.js"></script>
+    <script src="js/shifter2017.js"></script>
+    <link href='http://fonts.googleapis.com/css?family=Oswald:400,300,200' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Raleway:900,500,400" rel="stylesheet">
+    <link href="css/apr.css" rel="stylesheet">
+    <meta name="description" content="Website for Fem.Ale; a festival that celebrates women in the brewing industry.">
+    <meta name="keywords" content="Female,Ale,Brewsters,Women,Plasterers,Arms,Beer,Norwich,Pub,Pints,Music,Great,Real Ale,Craft Beer,Cider">
+    <meta name="author" content="Benjamin Andrew Hugo Thompson">
+    <meta charset="UTF-8">
 
-			.content{	border-radius:5px;	width:auto;	height:auto;	margin-left:70px;	margin-right:70px;	margin-top:40px;	margin-bottom:40px;	left:0;	right:0;	top:0;	bottom:0;	position:absolute;	visibility:hidden;	background-color:rgba(0,0,0,0.8);	padding:10px;	overflow:scroll;	}
-			.content p{	letter-spacing: 1px;	padding-left:50px;	padding-right:50px;	font-size:16px;}
-			.content h3{	color:white;	text-align:center;	padding-top:10px}
-	
-			#femaleContent{	position:absolute;	top:0;	bottom:0px;	margin-top:232.22px;	margin-bottom:40px;	width:100%;	height:auto;}
-	
-			#linkBottomBar{	width:100%;	background-color:#000;	letter-spacing: 1.5px;	text-align:center;	padding-top:5px;	position:absolute;	height:40px;	bottom:0px;}
-	
-			.photoSelector{	top:45%;	height:50%;	width:20px;	padding-left:20px; padding-right:20px;	text-align:center;	position:absolute;	color:#fff;	font-size:30;}
-			#photoSelectorLeft{	left:0px;}	
-			#photoSelectorRight{	right:0px;}
-			#photo{	display:block;	position:relative;	height:100%;	margin:auto;}
-			#videoFrame{visibility:inherit;	max-width:100%; display:block;	position:relative;	height:100%;	margin:auto;}
+    <script>
+        //GOOGLE ANALYTICS//
+        (function (i, s, o, g, r, a, m) {        
+i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+        ga('create', 'UA-12095952-2', 'auto');
+        ga('send', 'pageview');
+    </script>
+</head>
 
-		</style>
-		
-		<script>
-		function showContent(id){
-			$('#title').css({'visibility':'hidden'});
-			$('.content').each(function(){$(this).css({'visibility':'hidden'})});
-			$('#'+id).css({'visibility':'visible'});
-		}
-		
-		function changePhoto(e){
-			var oldID=parseInt($(e.target).attr("photoID"));
-			var leftOrRight=$(e.target).parents('.photoSelector').attr('id')=='photoSelectorRight'?1:
-				(oldID==0)?14:-1;
-			var newID=(oldID+leftOrRight)%15;
-			$(e.target).attr('photoID',newID);
-			$('#photo').attr('src','https://googledrive.com/host/0B2xtxnLEGecrVHRma2tUYndKNXc/'+newID+'.jpg');
-		}
 
-		$('document').ready(function(){
-			console.log('setTimeout');
-			setTimeout(function(){
-				$('#title').animate({'margin-top':'15px'},2500);
-				$('#menuBar').animate({'top':'0px'},2500);
-			},2000);
-			$('.photoSelector>a').each(function(){$(this).attr('photoID',0)});
-			var contentWidth=$('.content').width();
-			$('.content>p').css({'padding-left':(contentWidth/6), 'padding-right':(contentWidth/6)});
-			if ($(document).width()<$(document).height()) $('#photo').css({'height':'auto','width':'100%'});
+<body>
 
-		});
+    <div id="femaleWebsite">
 
-	</script>
-	</head>
-	<body>
-		<div id="femaleWebsite">
+        <div id='frontPage'>
 
-			<div id='title'>
-				<h1>FEM.ALE</h1>
-				<h2>BRITAIN'S FIRST BEER AND MUSIC FESTIVAL CELEBRATING GREAT WOMEN IN THE BREWING INDUSTRY</h2>
+            <!-- SURVEY LINK:
+
+			<div id='burst-12'> 
+				<div class='textContainer'>CASH <br> PRIZES!</div>
 			</div>
+-->
 
-<!-- // ------------------------- TOP -----------------------------//-->
-			<div id="menuBar">
-				<div id='logoBar'>
-					<img id="logo" src="img/wordlogo.gif">
-				</div>
-				<div id='menuOptions'>	
-					<h2>
-						<a href='#about' onclick='showContent("about");'>ABOUT</a>
-						<a href='#pictures' onclick='showContent("pictures");'>PICTURES</a>
-						<a href='#video' onclick='showContent("video");'>VIDEO</a> 
-						<!--<a href='https://fbstatic-a.akamaihd.net/rsrc.php/v2/y4/r/-PAXP-deijE.gif'>VIDEO</a> -->
-						<a href='female2015.html'>PAST</a>
-						<a href='#future' onclick='showContent("future");'>FUTURE</a>
-					</h2>					
-				</div>
-				
-			</div> <!-- menubar -->
-			
-<!--//------------------- MAIN CONTENT --------------------------//-->
+            <div id='headerRow'>
+                <div id='bannerLogoContainer'>
+                    <img src='img/women/banner_logo.gif'>
+                    <h4 class='navy'>CELEBRATING WOMEN IN THE BREWING INDUSTRY</h4>
+                </div>
+            </div>
 
-			<div id='femaleContent'>
-		
-				<div class='content' id='about' style='visibilty:visible'>
-					<p>
-FEM.ALE Brewster Beer Festivals is run by a very small group of very enthusiastic Norwich dwelling folk, with big ideas and average sized limbs. We aim to celebrate women in the brewing industry by showcasing their amazing beers and shouting about Brewster histories.
-<br><br>
-As well as our annual festival in May each year we run meet the Brewster beer tastings and beer and food matchings year round and have curated stages for the marvellous Norwich Sound and Vision Festival. Click here to see details of forthcoming events.
-<br><br>
-Our flagship festival features four days dedicated to Brewster beers at the Plasterers Arms. We source ales, lagers, stouts, porters, saisons and anything else we fancy from breweries across the UK and beyond and have been lucky enough to have some incredible one off brews from expert beer technologists created just for the festival. 
-<br><br>
-But it’s not just serving great beer: our festivals host panels of female beer experts, brewsters, authors and historians to give an insight into the brewing industry and enlighten us on the fundamental connection between women and beer throughout the history of human booze-making.
-As well as meet the Brewster beer tastings and food matchings, we love celebrating female creativity in music form too, welcoming female artists and DJs to provide us with the finest sound track to having a beer that you’ll find and always for free.
-					</p>
-				</div>
-			
-				<div class='content' id='pictures'>
-					<div class="photoSelector" id="photoSelectorLeft" onclick="changePhoto(event); return false;"><a href='#'>&lt</a></div>
-						<img id='photo'src='https://googledrive.com/host/0B2xtxnLEGecrVHRma2tUYndKNXc/0.jpg'></img>
-					<div class="photoSelector" id="photoSelectorRight" onclick="changePhoto(event); return false;"><a href='#'>&gt</a></div>
-				</div>
-				
-				<div class='content' id='video'>
-					<iframe id='videoFrame' width="560" height="315" src="https://www.youtube.com/embed/qaFfy6r8zKk" frameborder="0" allowfullscreen></iframe>
-				</div>	
-				<div class='content' id='future'>
-					<h3>Fem.Ale 2016, 3-5th June, Norwich</h3>
-					<p>
-On Friday 3rd June we'll be kicking off the weekend with a beer tasting from a local 
-Brewster, followed by female DJs soundtracking a night of great beers and inviting all 
-to come together to try a plethora of stouts, porters, pales, ambers and golds and 
-dance the night away to a party of women in music. <br/> <br/>
+            <div id='linksRow'>
+                <div class='girlsRow'>
+                    <div class='girlContainer' data-link='about'>
+                        <img src='img/women/girl1.gif'>
+                    </div>
 
-Saturday 4th June we will be holding our annual Beer Experts panel, with women 
-from the brewing industry, beer historians and journalists to impart their years of 
-experience and expertise in making incredible tasting brews. Saturday night will see 
-a night of live music from local female artists in collaboration with Norwich Arts 
-Centre and Pony Up promoter Rosie Arnold, because here at FEM.ALE we think beer 
-and live music are best friends! <br/> <br/>
+                    <div class='girlContainer' data-link='norwich'>
+                        <img src='img/women/girl2.gif'>
+                    </div>
+                    <div class='girlContainer' data-link='brighton'>
+                        <img src='img/women/girl3.gif'>
+                    </div>
+                    <div class='girlContainer' data-link='media'>
+                        <img src='img/women/girl4.gif'>
+                    </div>
+                </div>
 
-Our final day on Sunday 5th June will bring more brand new brews on the bar, with 
-some acoustic music in the bar in the afternoon. We'll also be holding our first zine
-and craft fair, inviting local DIY creatives to demonstrate their wares in the 
-Plasterers' splendid surroundings. Punters can browse from zines, prints, paintings 
-and craft pieces while we wind down to our Sunday night session and toast a final 
-celebration to the ingenious women at the forefront of the brewing industry and 
-encourage all to change any perception that fine ale is not a drink for women. 
-We want all people to feel welcome at FEM.ALE so we invite everyone to come, 
-drink and be merry! Stand by for more info and line-up news and we'll see you in 
-June! <br/>
-					</p>
-					<h3>Fem.Ale Brighton 6-8th May </h3>
-					<p>
-						Fem.Ale festival is going on the road! For three days we'll be taking over the taps at <a 
-href='http://www.marlboroughtheatre.org.uk/'> The Marlborough </a> to 
-showcase some of the finest brewster-made stouts, saisons, pilsners and pales. 
-Alongside all this deliciousness, we'll be hosting talks with some of the best brewers in the country, DJ dance-offs into the night and a live music street 
-party all day on Saturday.
-					</p>
-				</div>			
-			</div>			<!-- id='content' -->
-			
-			<div id="linkBottomBar">
-				<h3>
-					<a href="https://twitter.com/femalefestival">TWITTER</a>
-					&bsp
-					<a href="https://www.facebook.com/brewsterbeerfestival?fref=ts">FACEBOOK</a>
-					&bsp
-					<a href="mailto:E.Horton@uea.ac.uk">EMAIL</a>
-					&bsp
-					<a href="https://maps.google.co.uk/maps?f=q&source=s_q&hl=en&geocode=&q=plasterers+arms+norwich&aq=&sll=52.640143,1.28685&sspn=0.120834,0.154495&vpsrc=0&ie=UTF8&hq=&hnear=The+Plasterers+Arms,+43+Cowgate,+Norwich+NR3+1SZ,+United+Kingdom&ll=52.636878,1.299112&spn=0.007553,0.009656&t=m&z=16&iwloc=A">LOCATION MAP</a>
-				</h3>
-			</div> <!-- id="linkBottomBar" -->
+                <div id='linkTextRow'>
+                    <div class='linkTextContainer' data-link='about'>
+                        <h2 class='charcoal mainLink'>ABOUT</h2>
+                    </div>
+                    <div class='linkTextContainer' data-link='norwich'>
+                        <h2 class='charcoal mainLink'>NORWICH </h2>
+                        <h4 class='darkGreen'> 1st - 4th June 2018 </h4>
+                    </div>
+                    <div class='linkTextContainer' data-link='brighton'>
+                        <h2 class='charcoal mainLink'>BRIGHTON </h2>
+                        <h4 class='darkGreen'> 4th - 6th MAY 2018</h4>
+                    </div>
+                    <div class='linkTextContainer' data-link='media'>
+                        <h2 class='charcoal mainLink'>MEDIA</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- frontPage-->
 
 
 
-		</div>	<!-- id='femaleWebsite' -->
 
-	</body>
+
+
+        <!-- NAV BAR (after main page disappears) -->
+        <div id='leftBar'>
+            <div id='leftBarTop'>
+                <div id='mainGirlLogoContainer'>
+                    <img src='img/women/mainLogo.gif' id='mainGirlLogo'>
+                </div>
+                <div id='navLinks'>
+                    <h3 class='leftLink' data-link='about'>ABOUT</h3>
+                    <h3 class='leftLink' data-link='norwich'>NORWICH</h3>
+                    <h3 class='leftLink' data-link='brighton'>BRIGHTON</h3>
+                    <h3 class='leftLink' data-link='media'>MEDIA</h3>
+                </div>
+            </div>
+            <div id="leftBarBottom">
+                <div class='girlContainer'>
+                    <img src='img/women/girl1.gif' class='about'>
+                    <img src='img/women/girl2.gif' class='norwich'>
+                    <img src='img/women/girl3.gif' class='brighton'>
+                    <img src='img/women/girl4.gif' class='media'>
+                </div>
+
+
+                <div id='outLinksContainer'>
+                    <div class='outLinkContainer'>
+                        <a href="https://twitter.com/femalefestival">
+                            <img src='logos/twitter.gif'>
+                        </a>
+                    </div>
+                    <div class='outLinkContainer'>
+                        <a href="https://www.facebook.com/brewsterbeerfestival?fref=ts">
+                            <img src='logos/facebook.gif'>
+                        </a>
+                    </div>
+                    <div class='outLinkContainer'>
+                        <a href="https://www.instagram.com/fem.alefestival">
+                            <img src='logos/instagram.gif'>
+                        </a>
+                    </div>
+                    <div class='outLinkContainer'>
+                        <a href="mailto:ericahorton@hotmail.co.uk">
+                            <img src='logos/email.gif'>
+                        </a>
+                    </div>
+
+                    <br>
+                    <div class='outLinkContainer'>
+                        <a href="https://maps.google.co.uk/maps?f=q&source=s_q&hl=en&geocode=&q=plasterers+arms+norwich&aq=&sll=52.640143,1.28685&sspn=0.120834,0.154495&vpsrc=0&ie=UTF8&hq=&hnear=The+Plasterers+Arms,+43+Cowgate,+Norwich+NR3+1SZ,+United+Kingdom&ll=52.636878,1.299112&spn=0.007553,0.009656&t=m&z=16&iwloc=A">
+                            <img src='logos/map.gif'>
+                        </a>
+                    </div>
+                    <div class='plastContainer'>
+                        <a href="http://theplasterersarms.co.uk">
+                            <div class='outLinkContainer'>
+                                <img src='logos/pint.gif'>
+                            </div>
+                            <div class='span'>THE
+                                <br> PLASTERERS
+                                <br>ARMS </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- id="leftBarBottom" -->
+        </div>
+        <!-- id="leftBar" -->
+
+
+
+
+
+
+
+        <!-- INDIVIDUAL CONTENT SECTIONS -->
+        <div id='rightContent'>
+            <div class='section' id='aboutSection'>
+                <div class='title'>
+                    <h3> ABOUT FEM.ALE </h3>
+                </div>
+                <div class='textContent'>
+                    <img class='imgRight sheWolf' src='img/women/shewolf.jpg'>
+                    <p>
+                        FEM.ALE is a festival that showcases female led music and most importantly, beer brewed by women and enjoyed by everyone.
+                        Surprisingly, FEM.ALE is the first dedicated brewster festival in the U.K providing a platform to
+                        celebrate women in the beer industry through extensive lists of female brewed beer, meet-the-brewers,
+                        specially made one-off ales, panels, discussions and all sorts of other events.
+                    </p>
+                    <p>We get asked a few questions on a regular basis – sometimes from people with genuine inquiries or wanting
+                        clarification, sometimes from people being snarky because… well, that’s what you get for pointing
+                        out gender inequality.
+                    </p>
+
+                    <h4> What counts as a Brewster beer? </h4>
+                    <p>
+                        All the beers at FEM.ALE are designed, developed and brewed by women or brew teams that are led by women. Most of the breweries
+                        we source from are pretty small, so it’s easy to define who’s doing the brewing, as opposed to other
+                        jobs such as the accounts or the marketing. At some of the bigger beer companies, it’s harder to
+                        tell who’s at the heart of the physical brewing process and the creative design process, so we go
+                        to the women in those organisations and ask them what beers they’ve been involved with or which they
+                        would recommend in the line-up of beers at the brew co. they work at.
+                    </p>
+
+                    <h4> What’s the difference between ‘craft beer’ and ‘real ale’? </h4>
+                    <p>
+                        Technically, not a lot. Or at least it depends on where you are. As a cultural phenomenon, craft beer emerged out of smaller
+                        batch American breweries in the 1990s and 2000s, Sierra Nevada being a brand that used ‘craftiness’
+                        to offer an alternative beer identity to those at big beer co’s like Coors or Budweiser to huge commercial
+                        success. Here in the UK, thanks to CAMRA and the tireless work of thousands of brewers creating quality
+                        small batch beer, real ale breweries were always sort of…doing that anyway. However, while the American
+                        term ‘craft’ refers to the smaller volume of beer being produced, over here ‘craft’ refers more to
+                        the style. ‘Craft beer’ is often keg bound than barrel aged, is therefore fizzier and stronger American
+                        hops are used, giving American style craft beers a different, more pronounced hop flavour than ‘real
+                        ale’ does with our slightly less sun-drenched British-grown hops. Rain cloud emoji.
+                    </p>
+                    <h4> Where are all the women in cider-making?? </h4>
+                    <p>
+                        We’re working on it!
+                    </p>
+
+                    <h4> Are men allowed at the festival (hurr hurr)? </h4>
+                    <p>
+                        Yes (hurr hurr). We welcome all genders to the party.
+                    </p>
+
+                    <h4> Is the beer… different? </h4>
+                    <p>
+                        Different… to what? If you’re a regular beer drinker, you’re probably already drinking Brewster beers on a regular basis.
+                        Our plan is to bring a selection of them together to celebrate women in an industry where we are
+                        largely underrepresented.
+                    </p>
+
+                    <!-- 
+<p> 
+
+Sourcing an extensively rich collection of ales, lagers, stouts, porters, and saisons
+
+from female-led breweries across the UK and beyond, FEM.ALE is gearing up to
+
+showcase four days of brewster beers on tap for all to enjoy. 
+
+Prominently featured is
+
+the Unite Local Ale. Brewed on International Women’s Day, the Unite Local Ale is
+
+the result of 70 breweries around the world – including the FEM.ALE team – working
+
+together on International Women’s Collaboration Brew Day to make a unique ale.
+
+Punters can also be sure to expect more limited commissioned brews created by
+
+expert beer technologists. 
+
+
+Surprisingly, FEM.ALE is the first dedicated brewster festival in the U.K providing a
+
+platform to celebrate women in the beer industry, “Women are still being left out of
+
+the conversation. Despite all the successes – the vibrant networks of brewsters, the
+
+collaborations, the dialogues reinventing stereotypical narratives, the revival of the
+
+forgotten history of women in brewing – we still know that we'll run into all sorts of
+
+negative, oversimplified images of women from brewers and trade institutions alike
+
+who are abhorrently leaving women out of the discussion. And that's why FEM.ALE
+
+must exist, to bring women to the forefront of that conversation. When they're not too
+
+busy making outstanding beer, of course” said Erica Horton, FEM.ALE Director.
+
+
+But it’s not just about serving great beer, FEM.ALE is getting book smart by hosting
+
+free-to-attend debate panels. Beer experts, brewsters, authors and historians will
+
+share documented research about the brewing industry, including insight into the
+
+connection between women and beer throughout the history of human booze-
+making. Helen Warner from the University of East Anglia and Sam Goodman from
+
+Bournemouth University will discuss their examination of craft beer history.
+
+The ever popular ‘Meet the Brewster’ beer tastings and food matchings return, as will
+
+live local female-led music, including DJs.
+
+Attending the Festival is free but on a first come, first served basis. Come early to
+
+avoid disappointment.
+</p>
+-->
+                </div>
+            </div>
+
+            <div class='section' id='norwichSection'>
+                <div class='title'>
+                    <h3> NORWICH 2017 </h3>
+                </div>
+                <div class='textContent'>
+
+                    <p>
+                        For four days, all of the beer taps at
+                        <a href='http://theplasterersarms.co.uk'> The Plasterers Arms </a>will be dedicated to pouring you the finest craft brews in the country, exclusively
+                        brewed by women.
+                    </p>
+
+                    <img class='imgRight grrlGrey' src='img/women/grrlGreyPumpClip.jpg'>
+
+                    <h4>✪ FRIDAY 26th - 7PM: ✪</h4>
+                    <h5> LAUNCH PARTY </h5>
+                    <p>
+                        We're kicking off in our usual style with a launch party of local DJs spinning femme anthems to soundtrack a huge range of
+                        deliciousness available at the bar.
+                    </p>
+
+                    <h4>✪ SATURDAY 27th - 2PM ✪</h4>
+                    <h5>PANEL DISCUSSION</h5>
+                    <p>
+                        We know no one's really sick of experts! Chaired by festival director Erica Horton, The Plasterers welcomes academics from
+                        UEA, Bournemouth and Leicester to share their research on craft work, histories of beer and how the
+                        industry is working today to diversify its work force. Sam Goodman joins us to discuss his research
+                        on beer and colonialism and the ways in which discourses of British entrepreneurship and Empire still
+                        appear in craft beer branding today. Helen Warner shares her research into gender and craft work
+                        and questions why, when women are increasingly moving into 'craft' industries and self employment,
+                        microbrewing and the rise of the craft beer industry has seen a continued male gendered identity.
+                        Chris Land and Scott Taylor will present some of their work on the craft beer industry and the ways
+                        in which discourses around gender in advertising and in the industry itself creates disparity in
+                        the labour force. Theyve interviewed all sorts of people working in beer - including us! As well
+                        as sharing academic research, we welcome all our local beer experts and brewers to take part in an
+                        interactive Q&A, where you can explore our speakers' thoughts further, and make your own voices heard
+                        in the conversation using your own experiences of beer and pub culture.
+                    </p>
+
+                    <img class='imgLeft' src='img/otherHalf.jpg'>
+                    <h4>✪ SATURDAY 27th - 8PM ✪</h4>
+                    <h5>OTHER HALF + SUPPORT</h5>
+                    <p>
+
+                        After all the book smarts and conversation we get live with femme fronted bands from Norfolk and beyond. All our events are
+                        free so come see your new favourite bands and swing your pants to your old favourites too!
+                        <div class='clear'></div>
+
+
+                        <img class='imgRight' src='img/totoro.jpg'>
+                        <h4>✪ SUNDAY 28th - 11AM ✪ </h4>
+                        <h5>SUNDAY CINEMA - MY NEIGHBOR TOTORO</h5>
+                        <p>
+                            <a href='http://www.rogerebert.com/reviews/great-movie-my-neighbor-totoro-1993'> Classic family film from Studio Ghibli</a>, which tells the story of two young daughters of a
+                            professor and their adventures with wood spirits in rural Japan. Breakfast is served in the pub
+                            from 10.</p>
+                        <div class='clear'></div>
+
+                        <img class='imgLeft' src='img/belindaWide.jpg'>
+
+                        <h4>✪ SUNDAY 28th - 3PM ✪ </h4>
+                        <h5>BEER LAUNCH - WOODFORDE'S & PEOPLE'S BREWERY COLLABORATION</h5>
+                        <p>
+                            Join us for the launch of a one off beer brewed by Belinda from Woodfordes Brewery and Tracy from the People's Brewery. Have
+                            a chat with the brewers and get a taste of a unique brew from two women at the forefront of Norfolk
+                            brewing. We'll be running our FEM.ALE Film Club on Sunday with all the usual fair of weekend
+                            breakfast goodness on offer to soak up the beer deliciousness.
+                        </p>
+
+                        <div class='clear'></div>
+                        <img class='imgRight' src='img/lateNights.jpg'>
+                        <h4>✪ SUNDAY 28th - 4PM ✪ </h4>
+                        <h5>SUNDAY SESSIONS - LATE NIGHTS // EARLY MORNINGS + ANDREA KING</h5>
+                        <p>
+                            More brilliant female led music from upbeat acoustic three piece Late Nights // Early Mornings, and singer Andrea King.
+                        </p>
+                        <div class='clear'></div>
+
+                        <h4>✪ SUNDAY 28th - 8PM ✪ </h4>
+                        <h5>SUNDAY CINEMA - FILM TBD!</h5>
+                        <p>
+                            Last year's screening of The Craft went was incredibly popular so we'll be projecting another smasher to sip along to on
+                            Sunday evening. This year though, we're running a competition to choose our Sunday evening film...
+                            it can be anything at all, but it has to pass the
+                            <a href='http://bechdeltest.com/'>Bechdel test!</a> Got a suggestion? Give us a
+                            <a href='https://twitter.com/femalefestival'>tweet</a>, or drop us a line on
+                            <a href='https://www.facebook.com/brewsterbeerfestival?fref=ts'>Facebook</a>
+                        </p>
+
+                        <h4>✪ MONDAY 29th - 8PM ✪</h4>
+                        <h5> PUB QUIZ </h5>
+                        <p>
+                            As its bank holiday weekend we'll be serving up more brewster beers all day Monday. Get your brain juices flowing and finish
+                            off the weekend with the FEM.ALE Pub Quiz, raising more funds for the 4women centre based in
+                            Norwich. All genders are welcome, as always, and all events are free all weekend, so come down,
+                            get yourself a beer and lets raise a glass to the women at the helm of the craft beer industry!
+                            Cheers!
+                        </p>
+
+                        <h4>✪ BEER LIST ✪ </h4>
+                        <div class='beerList'>
+                            <ul>
+                                <li>Beavertown - Gamma Ray 5.4% pale </li>
+                                <li>Beavertown Bloody Ell - 7.2% IPA </li>
+                                <li>Cloudwater Double Dry Hopped Southern Passion, 5.8% pale </li>
+                                <li>Cloudwater DIPL 9% lager </li>
+                                <li>Cloudwater François BA Biere Brut, 6% BA saison </li>
+                                <li>Cloudwater - NW DIPA Citra, 9% DIPA </li>
+                                <li>Harviestoun - Wheat Beastie, 4.3% </li>
+                                <li>Harviestoun - Ola Dubh 12, 8% BA stout </li>
+                                <li>Magic Rock Magic Spanner - 3.9% pale </li>
+                                <li>Magic Rock - Half Cut, 8% DIPA </li>
+                                <li>Magic Rock - Grower Owned, 6% IPA </li>
+                                <li>Mallinsons Mosaic, 4% pale </li>
+                                <li>Mallinsons Citra, 3.8% pale </li>
+                            </ul>
+                        </div>
+                        <div class='beerList'>
+                            <ul>
+                                <li>Oldershaw - Blonde Volupta, 5% pale </li>
+                                <li>Oldershaw - Grantham Porter, 4.5% dark </li>
+                                <li>Oldershaw - Newton's Drop, 4.1% chestnut </li>
+                                <li>Tiny Rebel - Fugg Life, 4.2% pale </li>
+                                <li>Tiny Rebel - Juicy 4.8% </li>
+                                <li>Tiny Rebel - Billabong - 4.6% </li>
+                                <li>Tiny Rebel - Clwb Tropicana, 5.5% tropical fruit pale </li>
+                                <li>Tiny Rebel - Super Saison, 7.4% kaffir & lemon verbena saison</li>
+                                <li>Waen - Lemon Drizzle, 3.7% lemon vanilla pale </li>
+                                <li>Waen - Pamplemousse, 4.2% pale </li>
+                                <li>Waen - Snowball, 7% white chocolate stout </li>
+                                <li>Woodforde's - Hope In The Hops, 4.2% pale </li>
+                                <li>Woodfordes - Fem.Ale dry-hopped IPA, 7% IPA </li>
+                                <li>Woodfordes & People's Brewery Collab, 7% Black IPA </li>
+                            </ul>
+                        </div>
+                </div>
+            </div>
+
+
+
+
+
+
+
+            <div class='section' id='brightonSection'>
+                <div class='title'>
+                    <h3> BRIGHTON 2017 </h3>
+                </div>
+                <div class='textContent'>
+
+                    <p>
+                        Last year was a total fun fest so we're scooting down to Brighton from our home town of Norwich once again, with all the
+                        best beers and some more musical buddies in tow. Oh and all our events are free. I know, right?!
+                    </p>
+                    <h4>✪ FRIDAY ✪ </h4>
+                    <p>
+                        We're kicking off the weekend with all the best brewster beers and Emma Inch from Fermentation Radio Show spinning some rockabilly
+                        vibes for your listening pleasure.
+                    </p>
+                    <h4>✪ SATURDAY ✪ </h4>
+                    <p>
+                        Did someone say all day street party?! YES IT WAS US. We're shutting down the street outside the Marly to bring you live
+                        music, stalls and outisde beer drinking facilities, and vegan food. Compered by the wonderful Emma
+                        Frankland. We're bringing Norwich two piece Sink Ya Teeth with their bassy beats and poetic vocals
+                        and London based The Nyx will be bringing their patriarchy smashing rock noises. Plus Brighton based
+                        megababe I Am Fya - dark Basslines and sexed up vocals to make your knees go weak! Dancing is advised.
+                        Browse the stalls and enjoy (fingers crossed) the sunshine while trying a huge range of brewster
+                        beers - from midday til six!
+                    </p>
+                    <h4>✪ SATURDAY NIGHT ✪ </h4>
+
+                    <p>
+                        UH OH SPAGHETTI OHS. We're very pleased to add BOSSY Brighton to our weekend of entertainment. After the street party we'll
+                        move the tunes back inside as BOSSY kick off a dance party of "the best tracks of the 90s to 2000s
+                        R&B. Nothing but throwback anthems taking you back to the VH1 & MTV days" - loud shirts welcome.
+                    </p>
+                    <h4>✪ SUNDAY ✪ </h4>
+                    <p>After a big ol' street party there's nothing better than a giant roast and a little hair of the dog and
+                        that is exactly what you'll be getting, courtesty of the Vegan Food Pimp. Wind down the weekend with
+                        the last of the brewster beers available and toast the tastiness of these craftspeople's hard work,
+                        flavour skills and general knowse. Cheers!
+                    </p>
+
+
+
+                    <p>
+                        FEM.ALE’s platform has resonated further across the U.K, so much so that the festival is an annual fixture in Brighton’s
+                        Marlborough Pub and Theatre. Erica added, “People have been travelling from far and wide to be part
+                        of the movement. Taking the show on the road to Brighton last year was a gamble, but one that paid
+                        off. It was an incredible buzz to see FEM.ALE in full force in another city, far away from my own”.
+                    </p>
+                </div>
+            </div>
+
+            <div class='section' id='mediaSection'>
+                <div class='title'>
+                    <h3> PHOTOS, VIDEOS &amp; PRESS</h3>
+                </div>
+                <br>
+                <div class='pressContainer'>
+                    <div>
+                        <ul>
+                            <li>
+                                <a href='https://www.theguardian.com/business/2016/jun/04/battle-brewing-female-beermakers-take-aim-at-industry-sexism'>Guardian article</a>
+                            </li>
+                            <li>
+                                <a href='http://www.edp24.co.uk/news/norwich-beer-festival-will-put-the-spotlight-on-female-brewers-for-a-fourth-year-1-4973916'>EDP article</a>
+                            </li>
+                            <li>
+                                <a href='http://cask-marque.co.uk/cask-matters/fem-ale-festival-returns/'> Cask Marque </a>
+                            </li>
+                            <li>
+                                <a href='http://firstwefeast.com/eat/2015/05/female-beer-festivl-uk-celebrates-beer-brewed-by-women-and-enjoyed-by-all'>First We Feast feature</a>
+                            </li>
+                            <li>
+                                <a href='https://theparallelmagblog.wordpress.com/2016/04/28/fem-ale-brewster-beer-festival/'>Parallel Magazine Interview</a>
+                            </li>
+                            <li>
+                                <a href='https://imperialmeasuresblog.wordpress.com/2016/10/31/fem-ale-brewster-beer-festivals-gender-politics-in-craft-work-in-the-modern-brewing-industry/'>Guest Feature on Imperial Measure Blog</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class='mediaVideoContainer'>
+                    <iframe src="https://www.youtube.com/embed/qaFfy6r8zKk" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- end contents. -->
+
+    </div>
+    <!-- id='femaleWebsite' -->
+</body>
+
 </html>

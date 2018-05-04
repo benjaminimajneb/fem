@@ -15,22 +15,31 @@
 
     <script>
         //GOOGLE ANALYTICS//
-        (function (i, s, o, g, r, a, m) {
-            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
-                (i[r].q = i[r].q || []).push(arguments)
-            }, i[r].l = 1 * new Date(); a = s.createElement(o),
-                m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        (function (i, s, o, g, r, a, m) {        
+i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
         })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
         ga('create', 'UA-12095952-2', 'auto');
         ga('send', 'pageview');
     </script>
 </head>
 
+
 <body>
 
     <div id="femaleWebsite">
 
         <div id='frontPage'>
+
+            <!-- SURVEY LINK:
+
+			<div id='burst-12'> 
+				<div class='textContainer'>CASH <br> PRIZES!</div>
+			</div>
+-->
+
             <div id='headerRow'>
                 <div id='bannerLogoContainer'>
                     <img src='img/women/banner_logo.gif'>
@@ -50,7 +59,7 @@
                     <div class='girlContainer' data-link='brighton'>
                         <img src='img/women/girl3.gif'>
                     </div>
-                    <div class='girlContainer' data-link='nottingham'>
+                    <div class='girlContainer' data-link='media'>
                         <img src='img/women/girl4.gif'>
                     </div>
                 </div>
@@ -67,10 +76,8 @@
                         <h2 class='charcoal mainLink'>BRIGHTON </h2>
                         <h4 class='darkGreen'> 4th - 6th MAY 2018</h4>
                     </div>
-                    <div class='linkTextContainer' data-link='nottingham'>
-                        <h2 class='charcoal mainLink'>NOTTINGHAM</h2>
-                        <h4 class='darkGreen'> 9th - 15th JUNE 2018</h4>
-
+                    <div class='linkTextContainer' data-link='media'>
+                        <h2 class='charcoal mainLink'>MEDIA</h2>
                     </div>
                 </div>
             </div>
@@ -90,9 +97,9 @@
                 </div>
                 <div id='navLinks'>
                     <h3 class='leftLink' data-link='about'>ABOUT</h3>
-                    <h3 class='leftLink' data-link='brighton'>BRIGHTON</h3>
                     <h3 class='leftLink' data-link='norwich'>NORWICH</h3>
-                    <h3 class='leftLink' data-link='nottingham'>NOTTINGHAM</h3>
+                    <h3 class='leftLink' data-link='brighton'>BRIGHTON</h3>
+                    <h3 class='leftLink' data-link='media'>MEDIA</h3>
                 </div>
             </div>
             <div id="leftBarBottom">
@@ -100,42 +107,42 @@
                     <img src='img/women/girl1.gif' class='about'>
                     <img src='img/women/girl2.gif' class='norwich'>
                     <img src='img/women/girl3.gif' class='brighton'>
-                    <img src='img/women/girl4.gif' class='nottingham'>
+                    <img src='img/women/girl4.gif' class='media'>
                 </div>
 
 
                 <div id='outLinksContainer'>
                     <div class='outLinkContainer'>
                         <a href="https://twitter.com/femalefestival">
-                            <img src='img/smLogos/twitter.gif'>
+                            <img src='logos/twitter.gif'>
                         </a>
                     </div>
                     <div class='outLinkContainer'>
                         <a href="https://www.facebook.com/brewsterbeerfestival?fref=ts">
-                            <img src='img/smLogos/facebook.gif'>
+                            <img src='logos/facebook.gif'>
                         </a>
                     </div>
                     <div class='outLinkContainer'>
                         <a href="https://www.instagram.com/fem.alefestival">
-                            <img src='img/smLogos/instagram.gif'>
+                            <img src='logos/instagram.gif'>
                         </a>
                     </div>
                     <div class='outLinkContainer'>
                         <a href="mailto:ericahorton@hotmail.co.uk">
-                            <img src='img/smLogos/email.gif'>
+                            <img src='logos/email.gif'>
                         </a>
                     </div>
 
                     <br>
                     <div class='outLinkContainer'>
                         <a href="https://maps.google.co.uk/maps?f=q&source=s_q&hl=en&geocode=&q=plasterers+arms+norwich&aq=&sll=52.640143,1.28685&sspn=0.120834,0.154495&vpsrc=0&ie=UTF8&hq=&hnear=The+Plasterers+Arms,+43+Cowgate,+Norwich+NR3+1SZ,+United+Kingdom&ll=52.636878,1.299112&spn=0.007553,0.009656&t=m&z=16&iwloc=A">
-                            <img src='img/smLogos/map.gif'>
+                            <img src='logos/map.gif'>
                         </a>
                     </div>
                     <div class='plastContainer'>
                         <a href="http://theplasterersarms.co.uk">
                             <div class='outLinkContainer'>
-                                <img src='img/smLogos/pint.gif'>
+                                <img src='logos/pint.gif'>
                             </div>
                             <div class='span'>THE
                                 <br> PLASTERERS
@@ -144,8 +151,8 @@
                     </div>
                 </div>
             </div>
+            <!-- id="leftBarBottom" -->
         </div>
-
         <!-- id="leftBar" -->
 
 
@@ -212,44 +219,69 @@
                         largely underrepresented.
                     </p>
 
-                </div>
+                    <!-- 
+<p> 
 
+Sourcing an extensively rich collection of ales, lagers, stouts, porters, and saisons
+
+from female-led breweries across the UK and beyond, FEM.ALE is gearing up to
+
+showcase four days of brewster beers on tap for all to enjoy. 
+
+Prominently featured is
+
+the Unite Local Ale. Brewed on International Women’s Day, the Unite Local Ale is
+
+the result of 70 breweries around the world – including the FEM.ALE team – working
+
+together on International Women’s Collaboration Brew Day to make a unique ale.
+
+Punters can also be sure to expect more limited commissioned brews created by
+
+expert beer technologists. 
+
+
+Surprisingly, FEM.ALE is the first dedicated brewster festival in the U.K providing a
+
+platform to celebrate women in the beer industry, “Women are still being left out of
+
+the conversation. Despite all the successes – the vibrant networks of brewsters, the
+
+collaborations, the dialogues reinventing stereotypical narratives, the revival of the
+
+forgotten history of women in brewing – we still know that we'll run into all sorts of
+
+negative, oversimplified images of women from brewers and trade institutions alike
+
+who are abhorrently leaving women out of the discussion. And that's why FEM.ALE
+
+must exist, to bring women to the forefront of that conversation. When they're not too
+
+busy making outstanding beer, of course” said Erica Horton, FEM.ALE Director.
+
+
+But it’s not just about serving great beer, FEM.ALE is getting book smart by hosting
+
+free-to-attend debate panels. Beer experts, brewsters, authors and historians will
+
+share documented research about the brewing industry, including insight into the
+
+connection between women and beer throughout the history of human booze-
+making. Helen Warner from the University of East Anglia and Sam Goodman from
+
+Bournemouth University will discuss their examination of craft beer history.
+
+The ever popular ‘Meet the Brewster’ beer tastings and food matchings return, as will
+
+live local female-led music, including DJs.
+
+Attending the Festival is free but on a first come, first served basis. Come early to
+
+avoid disappointment.
+</p>
+-->
+                </div>
             </div>
-            <!--
-                <div class='section' id='mediaSection'>
-                <div class='title'>
-                    <h3> PHOTOS, VIDEOS &amp; PRESS</h3>
-                </div>
-                <br>
-                <div class='pressContainer'>
-                    <div>
-                        <ul>
-                            <li>
-                                <a href='https://www.theguardian.com/business/2016/jun/04/battle-brewing-female-beermakers-take-aim-at-industry-sexism'>Guardian article</a>
-                            </li>
-                            <li>
-                                <a href='http://www.edp24.co.uk/news/norwich-beer-festival-will-put-the-spotlight-on-female-brewers-for-a-fourth-year-1-4973916'>EDP article</a>
-                            </li>
-                            <li>
-                                <a href='http://cask-marque.co.uk/cask-matters/fem-ale-festival-returns/'> Cask Marque </a>
-                            </li>
-                            <li>
-                                <a href='http://firstwefeast.com/eat/2015/05/female-beer-festivl-uk-celebrates-beer-brewed-by-women-and-enjoyed-by-all'>First We Feast feature</a>
-                            </li>
-                            <li>
-                                <a href='https://theparallelmagblog.wordpress.com/2016/04/28/fem-ale-brewster-beer-festival/'>Parallel Magazine Interview</a>
-                            </li>
-                            <li>
-                                <a href='https://imperialmeasuresblog.wordpress.com/2016/10/31/fem-ale-brewster-beer-festivals-gender-politics-in-craft-work-in-the-modern-brewing-industry/'>Guest Feature on Imperial Measure Blog</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class='mediaVideoContainer'>
-                    <iframe src="https://www.youtube.com/embed/qaFfy6r8zKk" frameborder="0" allowfullscreen></iframe>
-                </div>
-            </div>
-        -->
 
             <div class='section' id='norwichSection'>
                 <div class='title'>
@@ -297,95 +329,95 @@
 
                         After all the book smarts and conversation we get live with femme fronted bands from Norfolk and beyond. All our events are
                         free so come see your new favourite bands and swing your pants to your old favourites too!
-                    </p>
-                    <div class='clear'></div>
+                        <div class='clear'></div>
 
 
-                    <img class='imgRight' src='img/totoro.jpg'>
-                    <h4>✪ SUNDAY 28th - 11AM ✪ </h4>
-                    <h5>SUNDAY CINEMA - MY NEIGHBOR TOTORO</h5>
-                    <p>
-                        <a href='http://www.rogerebert.com/reviews/great-movie-my-neighbor-totoro-1993'> Classic family film from Studio Ghibli</a>, which tells the story of two young daughters of a professor
-                        and their adventures with wood spirits in rural Japan. Breakfast is served in the pub from 10.
-                    </p>
-                    <div class='clear'></div>
+                        <img class='imgRight' src='img/totoro.jpg'>
+                        <h4>✪ SUNDAY 28th - 11AM ✪ </h4>
+                        <h5>SUNDAY CINEMA - MY NEIGHBOR TOTORO</h5>
+                        <p>
+                            <a href='http://www.rogerebert.com/reviews/great-movie-my-neighbor-totoro-1993'> Classic family film from Studio Ghibli</a>, which tells the story of two young daughters of a
+                            professor and their adventures with wood spirits in rural Japan. Breakfast is served in the pub
+                            from 10.</p>
+                        <div class='clear'></div>
 
-                    <img class='imgLeft' src='img/belindaWide.jpg'>
+                        <img class='imgLeft' src='img/belindaWide.jpg'>
 
-                    <h4>✪ SUNDAY 28th - 3PM ✪ </h4>
-                    <h5>BEER LAUNCH - WOODFORDE'S & PEOPLE'S BREWERY COLLABORATION</h5>
-                    <p>
-                        Join us for the launch of a one off beer brewed by Belinda from Woodfordes Brewery and Tracy from the People's Brewery. Have
-                        a chat with the brewers and get a taste of a unique brew from two women at the forefront of Norfolk
-                        brewing. We'll be running our FEM.ALE Film Club on Sunday with all the usual fair of weekend breakfast
-                        goodness on offer to soak up the beer deliciousness.
-                    </p>
+                        <h4>✪ SUNDAY 28th - 3PM ✪ </h4>
+                        <h5>BEER LAUNCH - WOODFORDE'S & PEOPLE'S BREWERY COLLABORATION</h5>
+                        <p>
+                            Join us for the launch of a one off beer brewed by Belinda from Woodfordes Brewery and Tracy from the People's Brewery. Have
+                            a chat with the brewers and get a taste of a unique brew from two women at the forefront of Norfolk
+                            brewing. We'll be running our FEM.ALE Film Club on Sunday with all the usual fair of weekend
+                            breakfast goodness on offer to soak up the beer deliciousness.
+                        </p>
 
-                    <div class='clear'></div>
-                    <img class='imgRight' src='img/lateNights.jpg'>
-                    <h4>✪ SUNDAY 28th - 4PM ✪ </h4>
-                    <h5>SUNDAY SESSIONS - LATE NIGHTS // EARLY MORNINGS + ANDREA KING</h5>
-                    <p>
-                        More brilliant female led music from upbeat acoustic three piece Late Nights // Early Mornings, and singer Andrea King.
-                    </p>
-                    <div class='clear'></div>
+                        <div class='clear'></div>
+                        <img class='imgRight' src='img/lateNights.jpg'>
+                        <h4>✪ SUNDAY 28th - 4PM ✪ </h4>
+                        <h5>SUNDAY SESSIONS - LATE NIGHTS // EARLY MORNINGS + ANDREA KING</h5>
+                        <p>
+                            More brilliant female led music from upbeat acoustic three piece Late Nights // Early Mornings, and singer Andrea King.
+                        </p>
+                        <div class='clear'></div>
 
-                    <h4>✪ SUNDAY 28th - 8PM ✪ </h4>
-                    <h5>SUNDAY CINEMA - FILM TBD!</h5>
-                    <p>
-                        Last year's screening of The Craft went was incredibly popular so we'll be projecting another smasher to sip along to on
-                        Sunday evening. This year though, we're running a competition to choose our Sunday evening film...
-                        it can be anything at all, but it has to pass the
-                        <a href='http://bechdeltest.com/'>Bechdel test!</a> Got a suggestion? Give us a
-                        <a href='https://twitter.com/femalefestival'>tweet</a>, or drop us a line on
-                        <a href='https://www.facebook.com/brewsterbeerfestival?fref=ts'>Facebook</a>
-                    </p>
+                        <h4>✪ SUNDAY 28th - 8PM ✪ </h4>
+                        <h5>SUNDAY CINEMA - FILM TBD!</h5>
+                        <p>
+                            Last year's screening of The Craft went was incredibly popular so we'll be projecting another smasher to sip along to on
+                            Sunday evening. This year though, we're running a competition to choose our Sunday evening film...
+                            it can be anything at all, but it has to pass the
+                            <a href='http://bechdeltest.com/'>Bechdel test!</a> Got a suggestion? Give us a
+                            <a href='https://twitter.com/femalefestival'>tweet</a>, or drop us a line on
+                            <a href='https://www.facebook.com/brewsterbeerfestival?fref=ts'>Facebook</a>
+                        </p>
 
-                    <h4>✪ MONDAY 29th - 8PM ✪</h4>
-                    <h5> PUB QUIZ </h5>
-                    <p>
-                        As its bank holiday weekend we'll be serving up more brewster beers all day Monday. Get your brain juices flowing and finish
-                        off the weekend with the FEM.ALE Pub Quiz, raising more funds for the 4women centre based in Norwich.
-                        All genders are welcome, as always, and all events are free all weekend, so come down, get yourself
-                        a beer and lets raise a glass to the women at the helm of the craft beer industry! Cheers!
-                    </p>
+                        <h4>✪ MONDAY 29th - 8PM ✪</h4>
+                        <h5> PUB QUIZ </h5>
+                        <p>
+                            As its bank holiday weekend we'll be serving up more brewster beers all day Monday. Get your brain juices flowing and finish
+                            off the weekend with the FEM.ALE Pub Quiz, raising more funds for the 4women centre based in
+                            Norwich. All genders are welcome, as always, and all events are free all weekend, so come down,
+                            get yourself a beer and lets raise a glass to the women at the helm of the craft beer industry!
+                            Cheers!
+                        </p>
 
-                    <h4>✪ BEER LIST ✪ </h4>
-                    <div class='beerList'>
-                        <ul>
-                            <li>Beavertown - Gamma Ray 5.4% pale </li>
-                            <li>Beavertown Bloody Ell - 7.2% IPA </li>
-                            <li>Cloudwater Double Dry Hopped Southern Passion, 5.8% pale </li>
-                            <li>Cloudwater DIPL 9% lager </li>
-                            <li>Cloudwater François BA Biere Brut, 6% BA saison </li>
-                            <li>Cloudwater - NW DIPA Citra, 9% DIPA </li>
-                            <li>Harviestoun - Wheat Beastie, 4.3% </li>
-                            <li>Harviestoun - Ola Dubh 12, 8% BA stout </li>
-                            <li>Magic Rock Magic Spanner - 3.9% pale </li>
-                            <li>Magic Rock - Half Cut, 8% DIPA </li>
-                            <li>Magic Rock - Grower Owned, 6% IPA </li>
-                            <li>Mallinsons Mosaic, 4% pale </li>
-                            <li>Mallinsons Citra, 3.8% pale </li>
-                        </ul>
-                    </div>
-                    <div class='beerList'>
-                        <ul>
-                            <li>Oldershaw - Blonde Volupta, 5% pale </li>
-                            <li>Oldershaw - Grantham Porter, 4.5% dark </li>
-                            <li>Oldershaw - Newton's Drop, 4.1% chestnut </li>
-                            <li>Tiny Rebel - Fugg Life, 4.2% pale </li>
-                            <li>Tiny Rebel - Juicy 4.8% </li>
-                            <li>Tiny Rebel - Billabong - 4.6% </li>
-                            <li>Tiny Rebel - Clwb Tropicana, 5.5% tropical fruit pale </li>
-                            <li>Tiny Rebel - Super Saison, 7.4% kaffir & lemon verbena saison</li>
-                            <li>Waen - Lemon Drizzle, 3.7% lemon vanilla pale </li>
-                            <li>Waen - Pamplemousse, 4.2% pale </li>
-                            <li>Waen - Snowball, 7% white chocolate stout </li>
-                            <li>Woodforde's - Hope In The Hops, 4.2% pale </li>
-                            <li>Woodfordes - Fem.Ale dry-hopped IPA, 7% IPA </li>
-                            <li>Woodfordes & People's Brewery Collab, 7% Black IPA </li>
-                        </ul>
-                    </div>
+                        <h4>✪ BEER LIST ✪ </h4>
+                        <div class='beerList'>
+                            <ul>
+                                <li>Beavertown - Gamma Ray 5.4% pale </li>
+                                <li>Beavertown Bloody Ell - 7.2% IPA </li>
+                                <li>Cloudwater Double Dry Hopped Southern Passion, 5.8% pale </li>
+                                <li>Cloudwater DIPL 9% lager </li>
+                                <li>Cloudwater François BA Biere Brut, 6% BA saison </li>
+                                <li>Cloudwater - NW DIPA Citra, 9% DIPA </li>
+                                <li>Harviestoun - Wheat Beastie, 4.3% </li>
+                                <li>Harviestoun - Ola Dubh 12, 8% BA stout </li>
+                                <li>Magic Rock Magic Spanner - 3.9% pale </li>
+                                <li>Magic Rock - Half Cut, 8% DIPA </li>
+                                <li>Magic Rock - Grower Owned, 6% IPA </li>
+                                <li>Mallinsons Mosaic, 4% pale </li>
+                                <li>Mallinsons Citra, 3.8% pale </li>
+                            </ul>
+                        </div>
+                        <div class='beerList'>
+                            <ul>
+                                <li>Oldershaw - Blonde Volupta, 5% pale </li>
+                                <li>Oldershaw - Grantham Porter, 4.5% dark </li>
+                                <li>Oldershaw - Newton's Drop, 4.1% chestnut </li>
+                                <li>Tiny Rebel - Fugg Life, 4.2% pale </li>
+                                <li>Tiny Rebel - Juicy 4.8% </li>
+                                <li>Tiny Rebel - Billabong - 4.6% </li>
+                                <li>Tiny Rebel - Clwb Tropicana, 5.5% tropical fruit pale </li>
+                                <li>Tiny Rebel - Super Saison, 7.4% kaffir & lemon verbena saison</li>
+                                <li>Waen - Lemon Drizzle, 3.7% lemon vanilla pale </li>
+                                <li>Waen - Pamplemousse, 4.2% pale </li>
+                                <li>Waen - Snowball, 7% white chocolate stout </li>
+                                <li>Woodforde's - Hope In The Hops, 4.2% pale </li>
+                                <li>Woodfordes - Fem.Ale dry-hopped IPA, 7% IPA </li>
+                                <li>Woodfordes & People's Brewery Collab, 7% Black IPA </li>
+                            </ul>
+                        </div>
                 </div>
             </div>
 
@@ -445,76 +477,43 @@
                 </div>
             </div>
 
-            <div class='section' id='nottinghamSection'>
+            <div class='section' id='mediaSection'>
                 <div class='title'>
-                    <h3> NOTTINGHAM 2018 </h3>
+                    <h3> PHOTOS, VIDEOS &amp; PRESS</h3>
                 </div>
-                <div class='textContent'>
-                    <p>
-
-                        Female Brewster Pub Takeover: All five cask and all ten keg taps pouring nothing but beer brewed by women all week for Nottingham
-                        Craft Beer Week 2018
-                        <br>
-                        <br> Expect to see; Wild Card, Burnt Mill, Welbeck Abbey, Brewsters, Tiny Rebel, Charnwood, Dancing Duck,
-                        Wiper &amp; True and Hollowstone +more
-                    </p>
-                    <h4>✪ SATURDAY 9th JUNE 9pm</h4>
-                    <h5>
-                        <a href="https://www.missbowie.co.uk">MISS BOWIE AND THE NEW KILLER STARS</a>
-                    </h5>
-                    <p>
-                        Our unofficial Nottingham Craft Beer Week opening ceremony. Live music from female-fronted David Bowie tribute with a few
-                        unique twists. Miss Bowie and the New Killer Stars aim to do justice to the genius of David Bowie&#39;s
-                        music with authentic and heartfelt performances of their interpretations of his songs, at the same
-                        time as paying homage to the original versions. Lead vocalist Jane Roberts says &ldquo;We are pretty
-                        sure David would have approved [of a female singer], his whole ethos on androgyny, boundary shattering,
-                        and (most importantly) on love, is something very close to our hearts.&rdquo; Free entry. Drinks
-                        offers. Strictly over 18&rsquo;s.
-                    </p>
-                    <h4>✪ SUNDAY 10TH JUNE 5pm</h4>
-                    <h5>FEM.ALE PANEL DISCUSSION</h5>
-                    <p>
-                        Chaired by Erica Horton, Bunkers Hill welcomes Jaega Wise from Wild Card Brewery and newly appointed South East Director
-                        for SIBA, Claire Monk from Welbeck Abbey Brewery in Nottinghamshire and Natalie Bullin, Nottingham
-                        CAMRA Young Members Co-Ordinator. Arrive early to meet brewsters Jaega and Claire, five of each of
-                        their beers will be on tap.
-                    </p>
-                    <h4>✪ THURSDAY 14TH JUNE 8pm</h4>
-                    <h5>AN EVENING WITH MELISSA COLE
-                        <br /> ADV &pound;10 / DOOR &pound;16&nbsp;
-                    </h5>
-                    <p>
-                        Buy your tickets&nbsp;
-                        <a href="https://www.gigantic.com/melissa-cole-bunkers-hill-2018-06-14-20-00">here</a>
-                        <br /> This interactive tasting session will be hosted by award-winning beer &amp; food writer and sommALEier
-                        Melissa Cole, in an intimate space at Bunkers Hill in the Hockley area of Nottingham City Centre.
-                        Whether you are an active beer enthusiast or are more &#39;beer curious&#39;, this session is for
-                        you!
-                    </p>
-                    <p>
-                        While you enjoy your first beer, Melissa will begin with a short talk, leading into a full tasting. Working through 6 beers
-                        (all included with your ticket) chosen from Bunkers Hill&rsquo;s specially-selected FEM.ALE range,
-                        you will explore the breweries, beer styles, flavours and food pairing suggestions (Actual food optional
-                        but not included, sadly!), alongside a mini-Q&amp;A!
-                    </p>
-                    <p>
-                        Numbers are strictly limited (Only 50 tickets available). Tickets are &pound;10 in advance, which includes 6 thirds of beer
-                        (Available online at
-                        <a href='www.gigantic.com'>gigantic.com</a>).
-                    </p>
-                    <h4>✪ FRIDAY 15th JUNE &amp; SATURDAY 16TH JUNE 10pm-2am</h4>
-                    <h5>SISTERS OF SOUND</h5>
-                    <p>Nottingham-based vinyl only female DJ collective Sisters of Sound are providing the entertainment for
-                        the closing weekend of NCBW18 and they love music and dancing! Playing a pick&rsquo;n&rsquo;mix of
-                        styles including funk, soul, house, hip hop, garage surf, rock and indie. DJ&rsquo;s include Stiff
-                        Kittens, Sue Starbuck and Ana Galhard +more
-                    </p>
+                <br>
+                <div class='pressContainer'>
+                    <div>
+                        <ul>
+                            <li>
+                                <a href='https://www.theguardian.com/business/2016/jun/04/battle-brewing-female-beermakers-take-aim-at-industry-sexism'>Guardian article</a>
+                            </li>
+                            <li>
+                                <a href='http://www.edp24.co.uk/news/norwich-beer-festival-will-put-the-spotlight-on-female-brewers-for-a-fourth-year-1-4973916'>EDP article</a>
+                            </li>
+                            <li>
+                                <a href='http://cask-marque.co.uk/cask-matters/fem-ale-festival-returns/'> Cask Marque </a>
+                            </li>
+                            <li>
+                                <a href='http://firstwefeast.com/eat/2015/05/female-beer-festivl-uk-celebrates-beer-brewed-by-women-and-enjoyed-by-all'>First We Feast feature</a>
+                            </li>
+                            <li>
+                                <a href='https://theparallelmagblog.wordpress.com/2016/04/28/fem-ale-brewster-beer-festival/'>Parallel Magazine Interview</a>
+                            </li>
+                            <li>
+                                <a href='https://imperialmeasuresblog.wordpress.com/2016/10/31/fem-ale-brewster-beer-festivals-gender-politics-in-craft-work-in-the-modern-brewing-industry/'>Guest Feature on Imperial Measure Blog</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class='mediaVideoContainer'>
+                    <iframe src="https://www.youtube.com/embed/qaFfy6r8zKk" frameborder="0" allowfullscreen></iframe>
                 </div>
             </div>
 
         </div>
-
-        <!-- end contents. -->
+    </div>
+    <!-- end contents. -->
 
     </div>
     <!-- id='femaleWebsite' -->

@@ -26,6 +26,10 @@ function showFrontPage() {
     frontPageVisible = true;
 }
 
+function showNCBW() {
+    hideFrontPage('ncbw');
+}
+
 //MOVE TO CORRECT CONTENT SECTION
 function goToLink(event) {
     var sectionId = $(event.currentTarget).attr('data-link');
